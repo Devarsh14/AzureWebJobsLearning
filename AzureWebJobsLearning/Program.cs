@@ -23,6 +23,8 @@ namespace AzureWebJobsLearning
 
 
         // TODO :: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-2.2 --> Configuration provier link
+
+        // app settings .json file. copy to output directory if newer in properties. 
     class Program
     {
         static void Main(string[] args)
