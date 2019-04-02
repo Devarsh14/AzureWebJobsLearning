@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Azure.WebJobs;
+using Microsoft.Extensions.Logging;
 
 
 namespace AzureWebJobsLearning
@@ -10,8 +11,14 @@ namespace AzureWebJobsLearning
     // 1. Microsoft.Azure.WebJobs
     // 2. Microsoft.Azure.WebJobs.Extensions
 
-        // Note install both package. otherwise addAzureStorageCoreService will show not available. red line.
+    // Note install both package. otherwise addAzureStorageCoreService will show not available. red line.
 
+    //Install the latest stable version of the following NuGet packages: for Logging.
+    //Microsoft.Extensions.Logging - The logging framework.
+    //Microsoft.Extensions.Logging.Console - The console provider, which sends logs to the console.
+
+        // Install storage binding extension 
+        //  Microsoft.Azure.WebJobs.Extensions.Storage 
     class Program
     {
         static void Main(string[] args)
@@ -21,6 +28,10 @@ namespace AzureWebJobsLearning
                     {
                         b.AddAzureStorageCoreServices();
                     });
+            builder.ConfigureLogging((context, b) =>
+            {
+                b.AddConsole();
+            });
             var host = builder.Build();
             using (host)
             {
