@@ -19,6 +19,10 @@ namespace AzureWebJobsLearning
 
         // Install storage binding extension 
         // 5.  Microsoft.Azure.WebJobs.Extensions.Storage 
+
+
+
+        // TODO :: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-2.2 --> Configuration provier link
     class Program
     {
         static void Main(string[] args)
