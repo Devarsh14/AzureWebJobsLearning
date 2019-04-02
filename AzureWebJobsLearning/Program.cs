@@ -7,6 +7,8 @@ using Microsoft.Extensions.Logging;
 namespace AzureWebJobsLearning
 {
     // https://docs.microsoft.com/en-us/azure/app-service/webjobs-sdk-get-started Dot net core uses only 3.0.6 or > version of package.
+    // https://docs.microsoft.com/en-us/azure/app-service/webjobs-sdk-how-to
+    //https://docs.microsoft.com/en-us/azure/app-service/webjobs-dotnet-deploy-vs
     // Packge installed 
     // 1. Microsoft.Azure.WebJobs
     // 2. Microsoft.Azure.WebJobs.Extensions
@@ -25,6 +27,9 @@ namespace AzureWebJobsLearning
         // TODO :: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-2.2 --> Configuration provier link
 
         // app settings .json file. copy to output directory if newer in properties. 
+
+        // 6.  Storage emulator run
+        //7. storage explorer run
     class Program
     {
         static void Main(string[] args)
